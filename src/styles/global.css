@@ -1,0 +1,360 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #6b6b6b;
+  --faint: #a3a3a3;
+  --line: rgba(0, 0, 0, 0.07);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 12px 40px rgba(0, 0, 0, 0.06);
+  --radius-lg: 18px;
+  --radius: 12px;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+.app-shell {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+}
+
+.app-header {
+  margin-bottom: 40px;
+}
+
+.app-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.app-tagline {
+  margin: 10px 0 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.nav {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.nav button {
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.88rem;
+  color: var(--muted);
+  box-shadow: var(--shadow-sm);
+  transition: color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.nav button:hover {
+  color: var(--text);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.nav button.active {
+  color: var(--text);
+  border-color: rgba(0, 0, 0, 0.18);
+  box-shadow: var(--shadow-sm);
+}
+
+.flow-hero {
+  margin-bottom: 28px;
+}
+
+.flow-kicker {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--faint);
+  margin-bottom: 8px;
+}
+
+.flow-name {
+  margin: 0;
+  font-size: 1.65rem;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+}
+
+.flow-context {
+  margin: 8px 0 0;
+  font-size: 1rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.flow-meta {
+  margin-top: 14px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  font-size: 0.78rem;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.flow-switcher {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.flow-switcher label {
+  font-size: 0.8rem;
+  color: var(--faint);
+  width: 100%;
+}
+
+.flow-switcher button {
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: var(--muted);
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.flow-switcher button:hover {
+  color: var(--text);
+  border-color: rgba(0, 0, 0, 0.14);
+}
+
+.flow-switcher button.on {
+  color: var(--text);
+  border-color: rgba(0, 0, 0, 0.22);
+}
+
+.task-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.task-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 22px 22px 18px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.task-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.task-hint {
+  margin: 8px 0 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn {
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--text);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  opacity: 0.92;
+}
+
+.btn-quiet {
+  background: #fff;
+  border-color: var(--line);
+  color: var(--muted);
+}
+
+.btn-quiet:hover {
+  color: var(--text);
+  border-color: rgba(0, 0, 0, 0.14);
+}
+
+.btn-quiet.on {
+  color: var(--text);
+  border-color: rgba(0, 0, 0, 0.22);
+}
+
+.empty-panel {
+  text-align: left;
+  padding: 32px 24px;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-lg);
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.section-title {
+  margin: 0 0 6px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.section-lead {
+  margin: 0 0 24px;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.list-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin-bottom: 10px;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.list-card h3 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.list-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.field {
+  margin-bottom: 14px;
+}
+
+.field label {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--faint);
+  margin-bottom: 6px;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  font: inherit;
+  background: #fff;
+}
+
+.row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.danger-zone {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.linkish {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--muted);
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.linkish:hover {
+  color: var(--text);
+}
+
+.flow-toggle {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+
+@media (max-width: 480px) {
+  .app-shell {
+    padding: 32px 18px 88px;
+  }
+
+  .row-2 {
+    grid-template-columns: 1fr;
+  }
+}
